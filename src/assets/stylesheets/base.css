@@ -1,5 +1,11 @@
 .base-main {
-  background-color: black;
+  background-image:
+    url("../images/general/bkg/detalhe.png"),
+    url("../images/general/bkg/bgcontent.png");
+
+  background-position: center, top center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
 
   .base {
     font-family: "Merriweather", serif;
@@ -372,9 +378,20 @@
 
   /* inicio projeto */
   .abre {
+    width: 100%;
     position: relative;
-    background-color: black;
-    background: url("../images/general/bkg/capadesk.png") no-repeat center center;
+    background-color: #000;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .abre-bg {
+    width: 100%;
+    position: relative;
+    background: #000 url("../images/general/bkg/capadesk.png") no-repeat center center;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -388,20 +405,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 950px;
+    max-width: 700px;
     margin: auto;
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 
   .abre-content img {
-    max-width: 100%;
+    width: 100%;
   }
 
   .abre-content h1 {
     font-family: "DM Sans", sans-serif;
-    font-size: 64px;
+    font-size: 36px;
     font-weight: 900;
     color: #ffffff;
+    text-align: center;
 
     span {
       color: #8008FB;
@@ -409,15 +427,17 @@
   }
 
   .abre-content p {
+    margin-top: 20px;
     font-family: "DM Sans", sans-serif;
-    font-size: 36px;
+    font-size: 25px;
     font-weight: 400;
     color: #ffffff;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
-    .abre {
-      background: url("../images/general/bkg/capadesk.png") no-repeat left center;
+    .abre-bg {
+      background: #000 url("../images/general/bkg/capadesk.png") no-repeat left center;
     }
 
     .abre h1 {
@@ -427,6 +447,19 @@
     .abre-content p {
       font-size: 18px;
     }
+  }
+
+  .realizacao2 {
+    margin-top: 50px;
+    max-width: 720px;
+    padding: 0 20px;
+  }
+
+  .incricao {
+    max-width: 430px;
+    padding: 0 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .content {
@@ -443,11 +476,6 @@
     background-size: cover, cover;
   }
 
-  .realizacao {
-    margin-top: 50px;
-    max-width: 775px;
-    padding: 0 20px;
-  }
 
   .content-text {
     max-width: 1100px;
@@ -466,14 +494,18 @@
 
   .content-buttom {
     margin-top: 50px;
-    width: 447px;
+    max-width: 447px;
     height: 68px;
-    background: url("../images/general/bkg/retangle.png") no-repeat center center;
     background-size: cover;
     font-family: "DM Sans", sans-serif;
     font-size: 24px;
     font-weight: 400;
     color: #ffffff;
+    padding: 0 20px;
+  }
+
+  .content-buttom img {
+    width: 100%;
   }
 
   .content h2 {
@@ -483,6 +515,8 @@
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
   }
 
   .content-number {
@@ -511,6 +545,7 @@
     font-size: 32px;
     letter-spacing: 1px;
     color: black;
+    text-align: center;
   }
 
   .container-number p {
@@ -518,6 +553,7 @@
     font-weight: 400;
     font-size: 19px;
     color: #fff;
+    text-align: center;
   }
 
   .video_bg {
@@ -533,6 +569,7 @@
   .video_bg h2 {
     max-width: 1000px;
     text-align: center;
+    font-size: 48px;
 
     span {
       color: #8008FB;
@@ -558,9 +595,10 @@
   }
 
   .video-player--1260 {
-    width: 860px;
+    width: 768px;
     margin: 0 auto;
     border-radius: 50px;
+    padding: 0 20px;
 
     @media (max-width: 768px) {
       width: 300px;
@@ -575,6 +613,7 @@
     color: #ffffff;
     letter-spacing: 1px;
     text-align: center;
+    margin-bottom: 50px;
 
     span {
       color: #8008FB;
@@ -582,7 +621,729 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .content-text p {
+      font-size: 19px;
+    }
 
+    .container-number h1 {
+      font-size: 32px;
+    }
+
+    .container-number p {
+      font-size: 19px;
+    }
+
+    .content h2 {
+      font-size: 32px;
+    }
+
+    .text-talk {
+      font-size: 32px;
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+
+    .abre-content h1 {
+      font-size: 32px;
+
+      span {
+        display: none;
+      }
+    }
+
+    .video_bg h2 {
+      font-size: 26px;
+    }
+
+    .video-player--1260 {
+      border-radius: 15px;
+    }
+  }
+
+  /* inicio painel com modal*/
+  .painel1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff url("../images/general/bkg/detalhe.png") center center;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .painel2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/general/bkg/capadesk.png") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    ;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #1A1B85 10.26%, #000 100%);
+    ;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* 👈 isso aqui faz o X respeitar o bloco */
+  }
+
+  .modal-right {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* melhora no iOS */
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+
+    z-index: 10000;
+    /* 👈 acima de tudo */
+  }
+
+  .modal.active {
+    display: flex;
+  }
+
+  .modal-content {
+    max-width: 1200px;
+    border-radius: 20px;
+    display: flex;
+  }
+
+  /* lados */
+  .modal-left {
+    max-width: 360px;
+  }
+
+  .modal-left img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+  .modal-right {
+    max-width: 800px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-right h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: #fff;
+  }
+
+  .modal-right h2 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    font-style: italic;
+    color: #8008FB;
+    letter-spacing: 0.1px;
+  }
+
+  .modal-right p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    font-style: normal;
+    color: #fff;
+    letter-spacing: 0.1px;
+  }
+
+  /* botão fechar */
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* 📱 MOBILE */
+  @media (max-width: 768px) {
+    .modal {
+      overflow-y: auto;
+      /* 👈 SCROLL GERAL */
+      -webkit-overflow-scrolling: touch;
+      align-items: flex-start;
+      /* 👈 começa do topo */
+      padding: 80px 20px 40px;
+      /* espaço pro X */
+    }
+
+    .modal-content {
+      flex-direction: column;
+      height: auto;
+      /* 👈 deixa crescer */
+      max-width: 100%;
+    }
+
+    .modal-left {
+      margin-top: 0;
+      max-width: 180px;
+      margin: 0 auto;
+    }
+
+    .modal-right {
+      height: auto;
+      /* 👈 ESSENCIAL */
+      overflow: visible;
+      /* 👈 remove scroll interno */
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .modal-right p,
+    .modal-right h1,
+    .modal-right h2 {
+      text-align: center;
+    }
+
+    /* 👇 BOTÃO FIXO NA TELA */
+    .close {
+      position: fixed;
+      /* 👈 FIXO NA VIEWPORT */
+      top: 20px;
+      right: 20px;
+      z-index: 99999;
+    }
+  }
+
+  .text-painel1,
+  .text-painel2 {
+    max-width: 1000px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .text-painel1 h1 {
+    margin-top: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    color: #000;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .text-painel2 h1 {
+    margin-top: 70px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .text-painel1 h2,
+  .text-painel2 h2 {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    color: #8008FB;
+    text-align: center;
+  }
+
+  .text-painel1 p {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #000;
+    text-align: center;
+  }
+
+  .text-painel2 p {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .bio-painel {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .painel {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .painel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .painel h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-size: 27px;
+    text-align: center;
+  }
+
+  .destaque-painel h1 {
+    color: #fff !important;
+  }
+
+  .painel p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: #8008FB;
+  }
+
+  .painel button {
+    margin-top: 25px;
+    width: 180px;
+  }
+
+  @media (max-width: 768px) {
+
+    .text-painel1 h1,
+    .text-painel2 h1 {
+      font-size: 26px;
+    }
+
+    .text-painel1 h2,
+    .text-painel2 h2 {
+      font-size: 24px;
+
+    }
+
+    .text-painel1 p,
+    .text-painel2 p {
+      font-size: 19px;
+      line-height: 25px;
+    }
+
+    .painel {
+      max-width: 300px;
+    }
+
+    .painel img {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .painel button {
+
+      width: 100%;
+    }
+
+    .bio-painel {
+      gap: 40px;
+    }
+  }
+
+  /* final painel com modal */
+  /*inicio news*/
+  .notícias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000;
+  }
+
+  .noticias {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .noticias-grid {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* CARD */
+  .noticia {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .noticia img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+  }
+
+  .noticia h2 {
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+  }
+
+  /* LINK */
+  .noticia a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* BOTÃO */
+  .btn-veja-mais {
+    font-family: "Unbounded", sans-serif;
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 12px 20px;
+    background: #8008FB;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    letter-spacing: 0.1px;
+  }
+
+  .news {
+    font-family: "Unbounded", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .inova {
+    margin-top: 100px;
+    max-width: 100%;
+  }
+
+  .inova img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-inova {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .inova-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 781px;
+    order: 1;
+  }
+
+  .inova-content p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: #fff;
+
+    span {
+      color: #8008FB;
+    }
+  }
+
+  .inova-logo {
+    max-width: 200px;
+    order: 2;
+  }
+
+  .inova-logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mme-map {
+    flex-shrink: 0;
+    max-width: 480.574px;
+    height: 317px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img,
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .mapa {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mapa h1 {
+    margin-bottom: 30px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    color: #fff;
+
+    span {
+      color: #8008FB;
+    }
+  }
+
+  .info-mapa {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .mme-free {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mme-info p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+    max-width: 300px;
+  }
+
+  .mme-free h1 {
+    width: fit-content;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+    border: 1px solid #8008FB;
+    padding: 2px;
+    border-radius: 20px;
+    letter-spacing: 0.1px;
+    margin: 0;
+  }
+
+  .mme-free a {
+    background-color: #8008FB;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff;
+    width: fit-content;
+    padding: 0 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+  }
+
+  .googel {
+    margin-top: 50px;
+    max-width: 400px;
+    margin-bottom: 100px;
+  }
+
+  .patro {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 50px;
+  }
+
+  .realizacao,
+  .oferecimento {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .realizacao h1,
+  .oferecimento h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+
+  .realizacao img,
+  .oferecimento img {
+    width: 100%;
+    height: auto;
+  }
+
+  .expediente {
+    background-color: #000;
+  }
+
+  .expediente1 {
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 10px;
+    font-weight: 900;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    display: block;
+  }
+
+  .box-credits {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .box-credits a,
+  .box-credits span,
+  .box-credits strong {
+    font-family: "Roboto", sans-serif;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    display: block;
+  }
+
+  .box-credits a {
+    display: inline;
+  }
+
+  .box-credits strong {
+    margin-top: 18px;
+    font-weight: 700;
+  }
+
+  .googel-mobile {
+    display: none;
+  }
+
+  /* 📱 MOBILE */
+  @media (max-width: 768px) {
+    .googel-mobile {
+      display: block;
+    }
+
+    .google-desktop {
+      display: none;
+    }
+
+    .googel {
+      margin-top: 50px;
+      max-width: 300px;
+      margin-bottom: 100px;
+    }
+
+    .noticias-grid {
+      flex-direction: column;
+    }
+
+    .inova-content p {
+      font-size: 19px;
+    }
+
+    .inova-logo {
+      order: 1;
+    }
+
+    .inova-content {
+      order: 2;
+    }
+
+    .realizacao,
+    .oferecimento {
+      max-width: 240px;
+    }
+  }
+
+  /*final news*/
 
   /* fim projeto */
 }

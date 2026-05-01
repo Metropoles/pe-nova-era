@@ -42,17 +42,22 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Basic&family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap"
       rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="assets/stylesheets/base.css" />
 
     <div class="abre">
-      <div class="abre-content">
-        <img src="assets/images/general/bkg/title.png" alt="">
-        <h1 class="mt-30">13 de Maio de 2026 <span>|</span> 14h às 18h</h1>
-        <p>Local: Ulysses Centro de Convenções — Brasília/DF</p>
+      <div class="abre-bg">
+        <div class="abre-content">
+          <img src="assets/images/general/bkg/title.png" alt="">
+          <h1 class="mt-30">13 de Maio de 2026 <span>|</span> 14h às 18h</h1>
+          <p>Local: Ulysses Centro de Convenções — Brasília/DF</p>
+        </div>
       </div>
     </div>
     <div class="content">
-      <div class="realizacao">
+      <div class="realizacao2">
         <img src="assets/images/general/bkg/reali.png" alt="">
       </div>
       <div class="content-text">
@@ -63,16 +68,16 @@
           Veículos”, reunindo lideranças do setor público e privado para aprofundar e qualificar o debate sobre os
           caminhos da mobilidade no país.</p>
       </div>
-      <button class="content-buttom">
-        Inscreva-se gratuitamente
-      </button>
+      <div class="incricao">
+        <a href="https://appapi.botfy.app.br/metropoles"><img src="assets/images/general/bkg/inscreva.png" alt=""></a>
+      </div>
       <h2>O setor em números</h2>
       <div class="content-number stats mt-30">
         <div class="container-number">
           <h1> <span class="contador" data-target="20" data-suffix="%">0%</span> do PIB industrial</h1>
           <p>participação do setor automotivo</p>
         </div>
-        <div class="container-number">
+        <div class="container-number  ">
           <h1>+<span class="contador" data-target="40" data-suffix="%">0%</span></h1>
           <p>crescimento vs. 2024</p>
         </div>
@@ -109,25 +114,209 @@
       </div>
 
       <h1 class="text-talk">Talk com <br><span>especialistas</span></h1>
+      <div class="painel1" style="bottom: -50px;">
+        <div class="text-painel1">
+          <h1>PAINEL 1</h1>
+          <h2>Mobilidade, neoindustrialização e a consolidação do futuro brasileiro</h2>
+          <p>Como a política industrial está reposicionando o Brasil na nova era da mobilidade e da inovação.
+          </p>
+        </div>
+        <div class="bio-painel">
+          <div class="painel" data-nome="Marcus Cavalcanti" data-cargo="Secretário Especial do PPI da Casa Civil"
+            data-desc="Especialista em Políticas Públicas e Gestão Governamental, gestor público concursado e funcionário de carreira, ingressou na vida pública em 1979. Em janeiro de 2023, assumiu o cargo de Secretário Especial do Programa de Parcerias de Investimentos da Casa Civil da Presidência da República (SEPPI/CC/PR). Entre 2014 e 2022, foi Secretário de Infraestrutura do Estado da Bahia (SEINFRA), além de ter atuado como Superintendente de Transportes no estado e como Diretor-Geral em diversos órgãos de infraestrutura. Ao longo de sua trajetória, desempenhou funções em diferentes órgãos da administração pública baiana, integrou diversos conselhos e ocupou cargos de gerência, consolidando ampla experiência na gestão pública e na área de infraestrutura."
+            data-img="assets/images/general/bkg/marcus.png">
 
-    </div>
-    <div class="painel1">
-      <div class="text-painel1">
-        <h1>PAINEL 1</h1>
-        <h2>Mobilidade, neoindustrialização e a consolidação do futuro brasileiro</h2>
-        <p>Como a política industrial está reposicionando o Brasil na nova era da mobilidade e da inovação.
-        </p>
+            <img src="assets/images/general/bkg/marcus.png" alt="">
+            <h1 class="">Marcus Cavalcanti</h1>
+            <p>Secretário Especial do PPI da Casa Civil</p>
+            <button class="open-modal"><img src="assets/images/general/bkg/bio.png" alt=""></button>
+          </div>
+          <div class="painel" data-nome="Alexandre Baldy" data-cargo="Vice-presidente sênior da BYD"
+            data-desc="Graduado em Direito pela PUC. Empreendedor e industrial. Presidente do Partido Progressistas em Goiás. Ex-Secretário de Transportes Metropolitanos de São Paulo. Ex-Ministro de Estado das Cidades. Ex-Secretário de Estado de Indústria e Comércio e Presidente Nacional do Conselho de Secretários de Desenvolvimento. Ex-Deputado Federal por Goiás."
+            data-img="assets/images/general/bkg/alexandre.png">
+
+            <img src="assets/images/general/bkg/alexandre.png" alt="">
+            <h1>Alexandre Baldy</h1>
+            <p>Vice-presidente sênior da BYD</p>
+            <button class="open-modal"><img src="assets/images/general/bkg/bio.png" alt=""></button>
+          </div>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal" id="modal">
+          <div class="modal-content">
+
+            <button class="close">×</button>
+
+            <div class="modal-left">
+              <img id="modal-img">
+            </div>
+
+            <div class="modal-right">
+              <h1 id="modal-nome"></h1>
+              <h2 id="modal-cargo"></h2>
+              <p id="modal-desc"></p>
+
+            </div>
+
+          </div>
+        </div>
+
       </div>
-      <div class="bio-painel">
-        <div class="painel">
-          <img src="" alt="">
-          <h1>Marcus Cavalcanti </h1>
-          <p>Secretário Especial do PPI da Casa Civil</p>
-          <button><img src="" alt=""></button>
+      <div class="painel2">
+        <div class="text-painel2">
+          <h1>PAINEL 2</h1>
+          <h2>A expansão logística da eletrificação de frotas no Brasil</h2>
+          <p>Os caminhos para viabilizar a infraestrutura e sustentar o crescimento da mobilidade elétrica no país.
+          </p>
+        </div>
+        <div class="bio-painel" style="margin-bottom: 100px;">
+          <div class="painel destaque-painel" data-nome="Davi Bertoncello" data-cargo="CEO da Tupi Mobilidade"
+            data-desc="Davi Bertoncello é um dos principais nomes da mobilidade elétrica no Brasil. Fundador e diretor executivo da Tupi Mobilidade, plataforma líder em recarga rápida de veículos elétricos, atua no setor desde 2016 e em iniciativas de sustentabilidade desde 2012. É Embaixador da Mobilidade no Estadão e referência em infraestrutura de recarga, transição energética e inovação no transporte.<br><br>Vice-presidente de Comunicação e Marketing da ABVE desde 2024, foi reeleito em abril de 2026 para mais dois anos à frente da pasta, consolidando seu papel ativo na construção do ecossistema brasileiro de eletromobilidade."
+            data-img="assets/images/general/bkg/davi.png">
+
+            <img src="assets/images/general/bkg/davi.png" alt="">
+            <h1 class="">Davi Bertoncello</h1>
+            <p>CEO da Tupi Mobilidade</p>
+            <button class="open-modal"><img src="assets/images/general/bkg/bio.png" alt=""></button>
+          </div>
+          <div class="painel destaque-painel" data-nome="Gustavo Pamplona" data-cargo="Gerente de expansão da DVA"
+            data-desc="Gustavo Pamplona lidera a expansão estratégica e a infraestrutura da rede de concessionárias do Grupo DVA. Administrador com especialização em Gestão de Operações e Logística, possui vasta experiência no desenvolvimento de grandes empreendimentos voltados ao mercado automotivo, unindo visão operacional e eficiência logística."
+            data-img="assets/images/general/bkg/gustavo.png">
+
+            <img src="assets/images/general/bkg/gustavo.png" alt="">
+            <h1 class="">Gustavo Pamplona</h1>
+            <p>Gerente de expansão da DVA</p>
+            <button class="open-modal"><img src="assets/images/general/bkg/bio.png" alt=""></button>
+          </div>
+          <div class="painel destaque-painel" data-nome="Grace Kelly Ganharul"
+            data-cargo="Especialista em eletrificação veicular do SENAI-SP"
+            data-desc="Grace Kelly Ganharul é especialista em eletrificação veicular, com atuação nacional e internacional pelo SENAI-SP. Doutora em Nanociências e Materiais Avançados e mestre em Engenharia Mecânica, possui mais de 25 anos de experiência na indústria automotiva, com foco em desenvolvimento de produto e segurança veicular. Atua na formação de profissionais e no desenvolvimento de projetos estratégicos em mobilidade elétrica."
+            data-img="assets/images/general/bkg/grace.png">
+
+            <img src="assets/images/general/bkg/grace.png" alt="">
+            <h1 class="">Grace Kelly Ganharul</h1>
+            <p>Especialista em eletrificação veicular do SENAI-SP</p>
+            <button class="open-modal"><img src="assets/images/general/bkg/bio.png" alt=""></button>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="painel1" style="top: -50px;">
+        <div class="text-painel1">
+          <h1>PAINEL 1</h1>
+          <h2>Mobilidade, neoindustrialização e a consolidação do futuro brasileiro</h2>
+          <p>Como a política industrial está reposicionando o Brasil na nova era da mobilidade e da inovação.
+          </p>
+        </div>
+        <div class="bio-painel">
+          <div class="painel" data-nome="Clarisse Cunha Linke"
+            data-cargo="Diretora-executiva do Instituto de Políticas de Transporte e Desenvolvimento (ITDP)"
+            data-desc="Clarisse Cunha Linke é Diretora-Executiva do ITDP Brasil (Instituto de Políticas de Transporte e Desenvolvimento), onde atua desde 2012. Mestre pela London School of Economics (LSE) e doutoranda em Arquitetura e Urbanismo pela UFF, tem mais de 20 anos de experiência em políticas públicas, mobilidade urbana e desenvolvimento sustentável, com atuação no Brasil e no exterior.<br><br>Integra o Conselho do Futuro da Mobilidade do Fórum Econômico Mundial e já foi reconhecida internacionalmente por sua contribuição para o desenvolvimento de soluções de transporte mais inclusivas e sustentáveis."
+            data-img="assets/images/general/bkg/clarisse.png">
+
+            <img src="assets/images/general/bkg/clarisse.png" alt="">
+            <h1 class="">Clarisse Cunha Linke</h1>
+            <p>Diretora-executiva do Instituto de Políticas de Transporte e Desenvolvimento (ITDP)</p>
+            <button class="open-modal"><img src="assets/images/general/bkg/bio.png" alt=""></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="notícias">
+      <h1 class="news">Notícias</h1>
+      <div class="noticias">
+        <div class="noticias-grid" id="noticias"></div>
+
+        <a href="https://www.metropoles.com/tag/comece-investindo" class="btn-veja-mais" target="_blank">
+          Veja mais
+        </a>
+      </div>
+      <div class="inova">
+        <img src="assets/images/general/bkg/inova.png" alt="">
+      </div>
+      <div class="text-inova">
+        <div class="inova-content">
+          <p>O evento acontece dentro do <span>Innova Summit</span>, uma das principais conferências de inovação e
+            tecnologia da América Latina.</p>
+          <p>A iniciativa reúne líderes, empresas e especialistas para discutir soluções que impulsionam o
+            desenvolvimento econômico, tecnológico e social do país.</p>
+        </div>
+        <div class="inova-logo">
+          <img src="assets/images/general/bkg/inovalogo.png" alt="">
         </div>
       </div>
-
+      <div class="mapa">
+        <h1>Anote na <span>agenda</span></h1>
+        <div class="info-mapa">
+          <div class="mme-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122832.57543010531!2d-48.09313638903761!3d-15.829350329688824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3af497d1a31b%3A0x25333616a03d2777!2sCentro%20de%20Conven%C3%A7%C3%B5es%20Ulysses%20Guimar%C3%A3es!5e0!3m2!1spt-BR!2sbr!4v1748352312487!5m2!1spt-BR!2sbr"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="mme-info">
+            <p><strong>Evento: </strong>NOVA ERA dos Veículos</p>
+            <p><strong>Data: </strong>13 de maio de 2026</p>
+            <p><strong>Horário: </strong>14h às 18h</p>
+            <p><strong>Local: </strong>Ulysses Centro de Convenções SHS Quadra 5, Lote 1, Asa Sul - Brasília, DF</p>
+            <div class="mme-free">
+              <h1>Gratuito | Vagas limitadas</h1>
+              <a href="https://appapi.botfy.app.br/metropoles">Inscreva-se</a>
+            </div>
+          </div>
+        </div>
+        <div class="googel">
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=NOVA%20ERA%20dos%20Ve%C3%ADculos&dates=20260513T170000Z/20260513T210000Z&details=Evento%20sobre%20mobilidade%20e%20inova%C3%A7%C3%A3o&location=Ulysses%20Centro%20de%20Conven%C3%A7%C3%B5es%20SHS%20Quadra%205%20Lote%201%20Asa%20Sul%20Bras%C3%ADlia%20DF"
+            target="_blank" class="btn-agenda"><img class="google-desktop" src="assets/images/general/bkg/google.png"
+              alt=""> <img class="googel-mobile" src="assets/images/general/bkg/google-branco.png" alt=""></a>
+        </div>
+      </div>
     </div>
+    <section class="expediente mb-50 pb-50">
+      <div class="patro">
+        <div class="realizacao">
+          <h1>Realização:</h1>
+          <img src="assets/images/general/bkg/metro.png" alt="">
+        </div>
+        <div class="oferecimento">
+          <h1>Oferecimento:</h1>
+          <img src="assets/images/general/bkg/byd.png" alt="">
+        </div>
+      </div>
+      <h1 class="expediente1">Expediente</h1>
+      <div class="box-credits " style="margin-top: 50px;">
+        <strong>CEO</strong>
+        <span>Lilian Tahan</span>
+
+        <strong>Coordenação</strong>
+        <span>Fernando Braga</span>
+        <span>Gabriela Prado</span>
+
+        <strong>Produção</strong>
+        <span>Cibele Moreira</span>
+        <span>Edward Vieira</span>
+        <span>Yngrid Duarte</span>
+
+        <strong>EDIÇÃO</strong>
+        <span>Renaro Cardozo</span>
+        <span>Sarah Campo Dall'Orto</span>
+
+        <strong>Revisão de textos</strong>
+        <span>Geisiane Sousa</span>
+
+        <strong>DIREÇÃO DE ARTE</strong>
+        <span>Lucas Jonathan</span>
+
+        <strong>TECNOLOGIA</strong>
+        <span>Italo Ridney</span>
+        <span>Saulo Marques</span>
+        <span>Caio Sales</span>
+      </div>
+    </section>
+
 
     <!-- <div class="preloader-active">
         <div class="preloader-box">
