@@ -536,6 +536,7 @@
     align-items: center;
     background-color: #585FFC;
     width: 350px;
+    height: 150px;
   }
 
   .container-number h1 {
@@ -543,6 +544,7 @@
     font-weight: 700;
     font-style: bold;
     font-size: 32px;
+    line-height: 30px;
     letter-spacing: 1px;
     color: black;
     text-align: center;
@@ -552,6 +554,7 @@
     font-family: "Basic", sans-serif;
     font-weight: 400;
     font-size: 19px;
+    line-height: 20px;
     color: #fff;
     text-align: center;
   }
@@ -622,16 +625,22 @@
   }
 
   @media (max-width: 768px) {
+    .container-number {
+      width: 100%;
+      margin: 0 20px;
+    }
+
     .content-text p {
       font-size: 19px;
     }
 
     .container-number h1 {
-      font-size: 32px;
+      font-size: 25px;
+      line-height: 45px;
     }
 
     .container-number p {
-      font-size: 19px;
+      font-size: 18px;
     }
 
     .content h2 {
@@ -639,8 +648,8 @@
     }
 
     .text-talk {
-      font-size: 32px;
-      padding-top: 20px;
+      font-size: 25px;
+      padding: 0 20px;
       margin-top: 20px;
     }
 
@@ -698,7 +707,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 10;
   }
 
   .modal-content {
@@ -773,13 +782,17 @@
     color: #fff;
   }
 
-  .modal-right h2 {
+  .modal-right h3 {
     font-family: "DM Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
     font-style: italic;
     color: #8008FB;
     letter-spacing: 0.1px;
+  }
+
+  .modal-cargo {
+    text-align: start;
   }
 
   .modal-right p {
@@ -789,6 +802,7 @@
     font-style: normal;
     color: #fff;
     letter-spacing: 0.1px;
+    text-align: start;
   }
 
   /* botão fechar */
@@ -800,6 +814,13 @@
 
   /* 📱 MOBILE */
   @media (max-width: 768px) {
+
+    .modal-right p,
+    .modal-right h1,
+    .modal-right h3 {
+      text-align: center;
+    }
+
     .modal {
       overflow-y: auto;
       /* 👈 SCROLL GERAL */
@@ -832,11 +853,7 @@
       gap: 20px;
     }
 
-    .modal-right p,
-    .modal-right h1,
-    .modal-right h2 {
-      text-align: center;
-    }
+
 
     /* 👇 BOTÃO FIXO NA TELA */
     .close {
@@ -851,7 +868,6 @@
   .text-painel1,
   .text-painel2 {
     max-width: 1000px;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -865,7 +881,16 @@
     font-weight: 900;
     color: #000;
     font-size: 48px;
+    letter-spacing: 1px;
     text-align: center;
+  }
+
+  .text-painel1 h1,
+  .text-painel1 h2,
+  .text-painel1 p {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .text-painel2 h1 {
@@ -874,6 +899,7 @@
     font-weight: 900;
     color: #fff;
     font-size: 48px;
+    letter-spacing: 1px;
     text-align: center;
   }
 
@@ -893,6 +919,7 @@
     line-height: 40px;
     color: #000;
     text-align: center;
+    padding: 0 20px;
   }
 
   .text-painel2 p {
@@ -902,6 +929,7 @@
     line-height: 40px;
     color: #fff;
     text-align: center;
+    padding: 0 20px;
   }
 
   .bio-painel {
@@ -954,21 +982,24 @@
   }
 
   @media (max-width: 768px) {
+    .text-painel1 {
+      gap: 0;
+    }
 
     .text-painel1 h1,
     .text-painel2 h1 {
-      font-size: 26px;
+      font-size: clamp(26px, 5vw, 48px);
     }
 
     .text-painel1 h2,
     .text-painel2 h2 {
-      font-size: 24px;
+      font-size: clamp(20px, 5vw, 48px);
 
     }
 
     .text-painel1 p,
     .text-painel2 p {
-      font-size: 19px;
+      font-size: clamp(19px, 5vw, 48px);
       line-height: 25px;
     }
 

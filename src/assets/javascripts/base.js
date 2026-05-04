@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ================= notícias =================
   const container = document.getElementById("noticias");
 
-  fetch("https://www.metropoles.com/wp-json/metropoles/v1/last_news?tag=comece-investindo&limit=30")
+  fetch("https://www.metropoles.com/wp-json/metropoles/v1/last_news?tag=nova-era-veiculos")
     .then(res => res.json())
     .then(data => {
 
